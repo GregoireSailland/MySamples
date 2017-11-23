@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CloseGL</string>
+    <string name="sensoraccel_value">SensorAccel Value</string>
+    <string name="sensorview">sensorView</string>
+    <string name="main_button">main button</string>
+    <string name="button">Button</string>
+</resources>
