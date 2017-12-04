@@ -41,7 +41,16 @@ public class SensorService extends Service implements SensorEventListener{
         mAccelCurrent = SensorManager.GRAVITY_EARTH;
         mAccelLast = SensorManager.GRAVITY_EARTH;
     }
-
+    @Override
+    public void onDestroy() {
+        Toast.makeText(this, "My Service Stopped", Toast.LENGTH_LONG).show();
+        Log.d("MyService", "onDestroy");
+        //sensorManager.unregisterListener(this,sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
+        //sensorManager.unregisterListener(this,sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT));
+        sensorManager.unregisterListener(this,sensorManager.getDefaultSensor(Sensor.TYPE_ALL));
+        sensorManager=null;
+        //player.stop();
+    }
     public int onStartCommand(Intent intent, int flags, int startId){
         Log.d("MyService", "onStartCommand");
         sensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);          // get an instance of the SensorManager class, lets us access sensors.

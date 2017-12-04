@@ -4,4 +4,7 @@
     <string name="sensorview">sensorView</string>
     <string name="main_button">main button</string>
     <string name="button">Button</string>
+    <string name="btnapp2">Btnapp2</string>
+    <string name="btnapp3">Btnapp3</string>
+    <string name="httpurlconnection">httpurlconnection</string>
 </resources>

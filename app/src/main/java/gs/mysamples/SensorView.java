@@ -47,11 +47,14 @@ public class SensorView extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Intent i = new Intent(SensorView.this, SensorService.class);
+        startService(i);
         start();
     }
     @Override
     protected void onPause() {
         super.onPause();
+        stopService(new Intent(SensorView.this, SensorService.class));
         stop();
     }
 
